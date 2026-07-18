@@ -91,33 +91,6 @@ pytest tests/ -v --cov=etl
 
 ---
 
-## ☁️ Deploy to Render
-
-### Option A — One-click via `render.yaml` (recommended)
-
-1. Fork this repo on GitHub.
-2. Go to [Render Dashboard](https://dashboard.render.com) → **New → Blueprint**.
-3. Connect your GitHub repo — Render auto-reads `render.yaml`.
-4. Click **Apply** — both the API and Dashboard services are deployed automatically.
-
-### Option B — Manual service setup
-
-#### Deploy the API
-
-1. **New Web Service** → connect your repo.
-2. **Build Command:** `pip install -r requirements.txt && python -m etl.pipeline`
-3. **Start Command:** `uvicorn api.app:app --host 0.0.0.0 --port $PORT`
-4. **Environment:** Python 3.11
-
-#### Deploy the Dashboard
-
-1. **New Web Service** → connect your repo.
-2. **Build Command:** `pip install -r requirements.txt && python -m etl.pipeline`
-3. **Start Command:** `streamlit run dashboard/app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true`
-4. **Environment:** Python 3.11
-
----
-
 ## 🔬 Dataset
 
 | Column | Description |
