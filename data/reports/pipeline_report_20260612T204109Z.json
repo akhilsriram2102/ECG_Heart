@@ -1,0 +1,36 @@
+{
+  "run_timestamp": "20260612T204109Z",
+  "pipeline": "heart-disease-etl",
+  "rows": 303,
+  "features_cleaned": 18,
+  "features_ml": 22,
+  "nulls_removed": 6,
+  "target_distribution": {
+    "No": 164,
+    "Yes": 139
+  },
+  "age_stats": {
+    "count": 303.0,
+    "mean": 54.44,
+    "std": 9.04,
+    "min": 29.0,
+    "25%": 48.0,
+    "50%": 56.0,
+    "75%": 61.0,
+    "max": 77.0
+  },
+  "chol_stats": {
+    "count": 303.0,
+    "mean": 246.69,
+    "std": 51.78,
+    "min": 126.0,
+    "25%": 211.0,
+    "50%": 241.0,
+    "75%": 275.0,
+    "max": 564.0
+  },
+  "outputs": {
+    "cleaned_csv": "/home/claude/heart-pipeline/data/processed/heart_cleaned.csv",
+    "encoded_csv": "/home/claude/heart-pipeline/data/processed/heart_encoded.csv"
+  }
+}

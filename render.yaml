@@ -1,0 +1,21 @@
+services:
+  # ─── FastAPI Data Pipeline API ─────────────────────────────────────────────
+  - type: web
+    name: heart-pipeline-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt && python -m etl.pipeline
+    startCommand: uvicorn api.app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    healthCheckPath: /
+
+  # ─── Streamlit Dashboard ───────────────────────────────────────────────────
+  - type: web
+    name: heart-pipeline-dashboard
+    runtime: python
+    buildCommand: pip install -r requirements.txt && python -m etl.pipeline
+    startCommand: streamlit run dashboard/app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
