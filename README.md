@@ -1,7 +1,7 @@
 # 🫀 Heart Disease Data Engineering Pipeline
 
 A production-grade data engineering project built on the [Heart Disease dataset](https://www.kaggle.com/datasets/cherngs/heart-disease-cleveland-uci).  
-It features a full **Extract → Transform → Load (ETL)** pipeline, a **REST API** for data access, and an interactive **analytics dashboard** — all deployable to [Render](https://render.com) in one click.
+It features a full **Extract → Transform → Load (ETL)** pipeline, a **REST API** for data access, and an interactive **analytics dashboard** 
 
 ---
 
